@@ -1,0 +1,110 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+label{
+    cursor: pointer;;
+}   
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px;
+}
+li{
+    position: relative;
+    margin: 20px 20px 20px 20px;
+    cursor: pointer;
+    list-style: none;
+}
+.contents>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo-img{
+    width: 40px;
+}
+#user-img{
+    background-color: white;
+    width: 40px;
+    border-radius: 100%;
+}
+.sub-menu{
+    position: absolute;
+    top: 200%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;
+    width: 200px;
+}
+li:hover .sub-menu{
+    visibility: visible;
+    opacity: 1;
+    background-color: black;
+}
+.sub-sub-menu{
+    position: absolute;
+    top: 90%;
+    left: 110%;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;
+    width: 200px;
+}
+#list-for-students:hover .sub-sub-menu{
+    visibility: visible;
+    opacity: 1;
+    background-color: black;
+}
+#list-for-professionals:hover .sub-sub-menu{
+    visibility: visible;
+    opacity: 1;
+    background-color: black;
+}
+.hamburger{
+    display: none;
+    position: relative;
+}
+#hamburger-img{
+    width: 40px;
+}
+.ham-contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 150%;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px;
+    width: 200px;
+}
+@media screen and (max-width:650px){
+    .contents{
+        display: none;
+    }
+    .user-info{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    #ham-btn:focus  +.ham-contents{
+        visibility: visible;
+        opacity: 1;
+        background-color: black;
+    }
+}
